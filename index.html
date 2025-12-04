@@ -7,57 +7,88 @@
   <style>
     body {
       font-family: "Microsoft YaHei", sans-serif;
-      background: #f5f7fa;
+      background: linear-gradient(135deg, #eef2f3, #dfe9f3);
       margin: 0;
       padding: 0;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh;
     }
+
     .card {
-      background: white;
-      border-radius: 12px;
-      padding: 40px;
+      background: #fff;
+      border-radius: 18px;
+      padding: 40px 30px;
       text-align: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      max-width: 400px;
-      width: 100%;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      max-width: 420px;
+      width: 90%;
+      animation: fadeIn 0.8s ease-out;
     }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
     h1 {
       margin-bottom: 20px;
       color: #333;
+      font-size: 26px;
     }
+
     a {
       display: block;
-      margin: 10px 0;
+      padding: 12px;
+      margin: 12px 0;
       font-size: 18px;
-      color: #1e90ff;
+      color: #fff;
+      background: #1e90ff;
       text-decoration: none;
-      transition: 0.2s;
-    }
-    a:hover {
-      color: #ff5722;
-    }
-    .qrcode {
-      margin-top: 20px;
-    }
-    .qrcode img {
-      max-width: 200px;
       border-radius: 8px;
-      margin-top: 10px;
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    a:hover {
+      background: #ff5722;
+      transform: translateY(-3px);
+    }
+
+    .qrcode {
+      margin-top: 30px;
+    }
+
+    .qrcode p {
+      font-size: 16px;
+      margin-bottom: 6px;
+      color: #444;
+    }
+
+    .qrcode img {
+      width: 200px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
   </style>
 </head>
 <body>
   <div class="card">
     <h1>欢迎来到我的主页</h1>
+
     <a href="https://www.jianshu.com/u/adbc93a1af28" target="_blank">📖 我的简书</a>
     <a href="https://juejin.cn/user/793217660622736" target="_blank">💻 我的掘金</a>
+
     <div class="qrcode">
       <p>📱 微信公众号</p>
       <img src="images/qrcode_for_gh_6f6273a26d42_258.jpg" alt="微信公众号二维码">
     </div>
+
+    <div class="qrcode">
+      <p>👔 企业微信（个人）</p>
+      <img src="images/wecom_qrcode.jpg" alt="企业微信二维码">
+    </div>
+
     <div class="qrcode">
       <p>🎧 小宇宙播客</p>
       <img src="images/xiaoyuzhou_qrcode.jpg" alt="小宇宙播客二维码">
@@ -65,3 +96,4 @@
   </div>
 </body>
 </html>
+
